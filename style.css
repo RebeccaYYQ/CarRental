@@ -7,9 +7,13 @@
     margin-left: auto;
 }
 
+.hide {
+    display: none;
+}
+
 /* top level header/navigation */
 header {
-    background-color: #FFB933;
+    background-color: #E0E0D1;
     align-items: center;
     padding: 10px;
 }
@@ -44,20 +48,21 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #FC6E51;
+    background-color: #C75C5C;
     max-height: 46px;
 }
 
 .navButton {
     color: white;
-    background-color: #FC6E51;
+    background-color: #C75C5C;
     padding: 14px 16px;
     border: none;
     width: 125px;
+    cursor: pointer;
 }
 
 .navButton:hover {
-    background-color: #CC5B45;
+    background-color: #A44646;
 }
 
 .dropdown {
@@ -87,6 +92,12 @@ ul {
 .dropdown:hover .dropdownContent {
     display: block;
 }
+
+#showHideNavBtn {
+    width: auto;
+}
+
+/*  ----------------------------to check if still needed-----------------------------------------------*/
 
 #cartQuantity {
     background-color: #FC6E51;
