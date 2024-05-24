@@ -49,7 +49,7 @@ ul {
     margin: 0;
     padding: 0;
     background-color: #C75C5C;
-    max-height: 46px;
+    max-height: 47px;
 }
 
 .navButton {
@@ -131,8 +131,8 @@ ul {
 }
 
 .productItemImage {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 350px;
+    max-height: 350px;
 }
 
 .productItem {
@@ -140,7 +140,7 @@ ul {
     align-items: center;
     border-radius: 20px;
     border: 1px solid #ccc;
-    width: 200px;
+    width: 400px;
     padding: 15px;
     margin: 10px;
 }
@@ -153,10 +153,9 @@ ul {
     align-self: flex-start;
 }
 
-.quantityBtn {
-    padding: 5px 10px;
+.rentBtn {
+    padding: 5px 30px;
     cursor: pointer;
-    width: 35px;
 }
 
 .quantityField {
