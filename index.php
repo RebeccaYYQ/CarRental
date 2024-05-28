@@ -9,7 +9,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-    <title>Grocery Mart</title>
+    <title>Car Rental</title>
 </head>
 
 <body>
@@ -22,9 +22,9 @@
                 <input type="text" id="searchQuery" name="searchQuery" placeholder="Search cars" size="47">
                 <button id="searchButton" class="align-right" onClick="displaySearchResults()"><span class="material-symbols-outlined">search</span></button>
             </div>
-            <a href="cart.php" class="flex align-center">
+            <a href="reservations.html" class="flex align-center">
                 <span class="material-symbols-outlined md-60">bookmark</span>
-                <p><b>My Bookings</b></p>
+                <p><b>My Reservations</b></p>
             </a>
         </div>
     </header>
