@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Grocery Mart</title>
 </head>
+
+<!-- AJAX call to PHP server to get data and display it -->
+<script>
+    $(document).ready(function() {
+        //var carId = $('#carIdInput').val(); // Get the car ID from input
+        $.ajax({
+            url: 'getCarsFromDB.php',
+            type: 'GET',
+            //data: { car_id: carId }, // Send the car_id
+            success: function(data) {
+                var car;
+                for (var i = 0; i < data.length; i++) {
+                    car = data[i];
+                    $('#result').append(`<p>Car ID: ${car.car_id} Model: ${car.model} </p>`);
+                }
+            },
+            error: function(xhr, status, error) {
+                $('#result').html('Error: ' + error);
+            }
+        });
+
+    });
+</script>
 
 <body>
     <header class="flex">
@@ -19,8 +42,7 @@
         <div class="align-right flex">
             <form method="POST" action="index.php" class="flex" id="searchBar">
                 <input type="text" id="search" name="searchQuery" placeholder="Search cars" size="47">
-                <button id="searchButton" type="submit" class="align-right"><span
-                        class="material-symbols-outlined">search</span></button>
+                <button id="searchButton" type="submit" class="align-right"><span class="material-symbols-outlined">search</span></button>
             </form>
             <a href="cart.php" class="flex">
                 <span class="material-symbols-outlined md-60">shopping_cart</span>
@@ -29,29 +51,9 @@
         </div>
     </header>
     <?php require 'nav.html'; ?>
-    
+
     <main>
-        
-        <h2>$title</h2>
-        <section class='itemGrid flex'>
-            <div class='productItem flex'>
-                <img src='images/audi-a3.jpg' class='productItemImage'>
-                <p class='productItemContent'><b>Brand Model</b><br>
-                    Type | $xxx per day<br>
-                    xx seats, {transmission}, {fueltype}<br>
-                    Amount available: xxx<br> 
-                    Mileage:<br></p>
-                <button class='rentBtn' type='button' onClick='itemGridCart("minus")'>Rent</button>
-            </div>
-            <div class='productItem flex'>
-                <img src='images/audi-a3.jpg' class='productItemImage'>
-                <p class='productItemContent'><b>Brand Model</b><br>
-                    Type | $xxx per day<br>
-                    xx seats, {transmission}, {fueltype}<br>
-                    Amount available: xxx<br> 
-                    Mileage:<br></p>
-                <button class='rentBtn' type='button' onClick='itemGridCart("minus")'>Rent</button>
-            </div>
+        <section class='itemGrid flex' id="result">
         </section>
     </main>
 
