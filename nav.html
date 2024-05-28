@@ -4,63 +4,17 @@
 
     <!-- the categories -->
     <nav id="navCategories" class="hide">
-            <ul class="flex">
-                <li><button name="category" class="navButton" onClick="displaySearchResults()">All</button></li>
-                <li>
-                    <div class="dropdown flex">
-                        <button name="category" class="navButton" onClick="displaySearchResults('sedan')">Sedan</button>
-                        <div class="dropdownContent">
-                            <button name="subCategory" class="navSubButton" value="Frozen Meat">Toyota</button>
-                            <button name="subCategory" class="navSubButton" value="Ice Cream">BMW</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown flex">
-                        <button name="category" class="navButton" onClick="displaySearchResults('wagon')">Wagon</button>
-                        <div class="dropdownContent">
-                            <button name="subCategory" class="navSubButton"
-                                value="Fruit">Fruit</button>
-                            <button name="subCategory" class="navSubButton"
-                                value="Vegetable">Vegetable</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown flex">
-                        <button name="category" class="navButton"
-                            value="Beverages">Convertible</button>
-                        <div class="dropdownContent">
-                            <button name="subCategory" class="navSubButton"
-                                value="Coffee">Coffee</button>
-                            <button name="subCategory" class="navSubButton"
-                                value="Juice">Juice</button>
-                            <button name="subCategory" class="navSubButton" value="Tea">Tea</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown flex">
-                        <button name="category" class="navButton" value="Household">SUV</button>
-                        <div class="dropdownContent">
-                            <button name="subCategory" class="navSubButton"
-                                value="Cleaning">Cleaning</button>
-                            <button name="subCategory" class="navSubButton"
-                                value="Medicine">Medicine</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown flex">
-                        <button name="category" class="navButton" value="Pet Food">Minivan</button>
-                        <div class="dropdownContent">
-                            <button name="subCategory" class="navSubButton" value="Cat">Cat</button>
-                            <button name="subCategory" class="navSubButton" value="Dog">Dog</button>
-                            <button name="subCategory" class="navSubButton"
-                                value="Small Animals">Small Animals</button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <ul class="flex">
+            <li><button name="category" class="navButton" onClick="displaySearchResults()">All</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('sedan')">Sedan</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('wagon')">Wagon</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('convertible')">Convertible</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('SUV')">SUV</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('minivan')">Minivan</button></li>
+            <li><button name="category" class="navButton" id="borderBtn" onClick="displaySearchResults('audi')">Audi</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('BMW')">BMW</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('Toyota')">Toyota</button></li>
+            <li><button name="category" class="navButton" onClick="displaySearchResults('Volkswagen')">Volkswagen</button></li>
+        </ul>
     </nav>
 </header>

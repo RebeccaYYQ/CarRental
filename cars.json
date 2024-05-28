@@ -55,7 +55,7 @@
         {
             "car_id": 10004,
             "type": "SUV",
-            "brand": "VW",
+            "brand": "Volkswagen",
             "model": "Tiguan",
             "image": "vw-tiguan.png",
             "mileage": 10720,
@@ -276,7 +276,7 @@
         {
             "car_id": 10021,
             "type": "minivan",
-            "brand": "VW",
+            "brand": "Volkswagen",
             "model": "Multivan",
             "image": "VW-multivan.jpg",
             "mileage": 10000,
@@ -380,7 +380,7 @@
         {
             "car_id": 10029,
             "type": "wagon",
-            "brand": "VW",
+            "brand": "Volkswagen",
             "model": "Golf",
             "image": "vw-golf.jpg",
             "mileage": 9000,

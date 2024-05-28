@@ -3,7 +3,7 @@ car_id,type,brand,model,image,mileage,fuel_type,seats,quantity,price_day,transmi
 10001,sedan,Kia,Rio,kia-rio.png,13000,petrol,5,3,70,automatic
 10002,sedan,Toyota,Yaris,toyota-yaris.png,18000,petrol,5,2,40,automatic
 10003,SUV,MG,HS,mg-hs.png,23000,petrol,5,1,60,automatic
-10004,SUV,VW,Tiguan,vw-tiguan.png,10720,petrol,5,3,80,automatic
+10004,SUV,Volkswagen,Tiguan,vw-tiguan.png,10720,petrol,5,3,80,automatic
 10005,SUV,Nissan,Juke,nissan-juke.png,10050,petrol,5,1,100,automatic
 10006,SUV,Toyota,RAV4,toyota-rav4.png,13400,petrol,5,3,90,automatic
 10007,minivan,Kia,Carnival,kia-carnival.jpg,20000,petrol,8,3,300,automatic
@@ -20,7 +20,7 @@ car_id,type,brand,model,image,mileage,fuel_type,seats,quantity,price_day,transmi
 10018,convertible,Audi,A3,audi-a3.jpg,1000,petrol,4,3,300,automatic
 10019,convertible,Holden,Cascada,holden-cascada.jpg,500,petrol,4,2,90,automatic
 10020,minivan,Honda,Odyssey,honda-odyssey.jpg,4500,petrol,7,2,100,automatic
-10021,minivan,VW,Multivan,VW-multivan.jpg,10000,petrol,7,1,120,automatic
+10021,minivan,Volkswagen,Multivan,VW-multivan.jpg,10000,petrol,7,1,120,automatic
 10022,minivan,Toyota,Estima,toyota-estima.jpg,2000,petrol,7,2,110,automatic
 10023,minivan,Hyundai,STARIA,hun-staria.jpg,10000,petrol,5,3,300,automatic
 10024,SUV,Nissan,Patrol,nissan-patrol.jpg,1000,disel,5,1,80,manual
@@ -28,4 +28,4 @@ car_id,type,brand,model,image,mileage,fuel_type,seats,quantity,price_day,transmi
 10026,sedan,Holden,Astra,holden-astra.jpg,30000,petrol,5,2,60,manual
 10027,convertible,Ford,Mustang,ford-mustang.jpg,7000,petrol,4,1,100,automatic
 10028,wagon,Mazda,6,mazda-6.jpg,400,petrol,5,1,80,automatic
-10029,wagon,VW,Golf,vw-golf.jpg,9000,petrol,5,1,80,automatic
+10029,wagon,Volkswagen,Golf,vw-golf.jpg,9000,petrol,5,1,80,automatic
