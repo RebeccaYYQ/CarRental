@@ -1,6 +1,7 @@
 {
     "cars": [
         {
+            "car_id": 10000,
             "type": "sedan",
             "brand": "Toyota",
             "model": "Corolla Hatch",
@@ -13,6 +14,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10001,
             "type": "sedan",
             "brand": "Kia",
             "model": "Rio",
@@ -25,6 +27,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10002,
             "type": "sedan",
             "brand": "Toyota",
             "model": "Yaris",
@@ -37,6 +40,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10003,
             "type": "SUV",
             "brand": "MG",
             "model": "HS",
@@ -49,6 +53,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10004,
             "type": "SUV",
             "brand": "VW",
             "model": "Tiguan",
@@ -61,6 +66,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10005,
             "type": "SUV",
             "brand": "Nissan",
             "model": "Juke",
@@ -73,6 +79,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10006,
             "type": "SUV",
             "brand": "Toyota",
             "model": "RAV4",
@@ -85,6 +92,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10007,
             "type": "minivan",
             "brand": "Kia",
             "model": "Carnival",
@@ -97,6 +105,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10008,
             "type": "SUV",
             "brand": "BYD",
             "model": "ATTO 3",
@@ -109,6 +118,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10009,
             "type": "sedan",
             "brand": "BMW",
             "model": "2 Gran Coupe",
@@ -121,6 +131,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10010,
             "type": "sedan",
             "brand": "BMW",
             "model": "3 Series",
@@ -133,6 +144,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10011,
             "type": "sedan",
             "brand": "Tesla",
             "model": "Model 3",
@@ -145,6 +157,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10012,
             "type": "wagon",
             "brand": "Subaru",
             "model": "Outback",
@@ -157,6 +170,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10013,
             "type": "wagon",
             "brand": "Audi",
             "model": "A4 Avant",
@@ -169,6 +183,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10014,
             "type": "wagon",
             "brand": "Volvo",
             "model": "v60 Cross Country",
@@ -181,6 +196,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10015,
             "type": "wagon",
             "brand": "Audi",
             "model": "A6",
@@ -193,6 +209,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10016,
             "type": "convertible",
             "brand": "BMW",
             "model": "4 Series",
@@ -205,6 +222,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10017,
             "type": "convertible",
             "brand": "Audi",
             "model": "S3",
@@ -217,6 +235,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10018,
             "type": "convertible",
             "brand": "Audi",
             "model": "A3",
@@ -229,6 +248,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10019,
             "type": "convertible",
             "brand": "Holden",
             "model": "Cascada",
@@ -241,6 +261,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10020,
             "type": "minivan",
             "brand": "Honda",
             "model": "Odyssey",
@@ -253,6 +274,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10021,
             "type": "minivan",
             "brand": "VW",
             "model": "Multivan",
@@ -265,6 +287,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10022,
             "type": "minivan",
             "brand": "Toyota",
             "model": "Estima",
@@ -277,6 +300,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10023,
             "type": "minivan",
             "brand": "Hyundai",
             "model": "STARIA",
@@ -289,6 +313,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10024,
             "type": "SUV",
             "brand": "Nissan",
             "model": "Patrol",
@@ -301,6 +326,7 @@
             "transmission": "manual"
         },
         {
+            "car_id": 10025,
             "type": "sedan",
             "brand": "Honda",
             "model": "Civic",
@@ -313,6 +339,7 @@
             "transmission": "manual"
         },
         {
+            "car_id": 10026,
             "type": "sedan",
             "brand": "Holden",
             "model": "Astra",
@@ -325,6 +352,7 @@
             "transmission": "manual"
         },
         {
+            "car_id": 10027,
             "type": "convertible",
             "brand": "Ford",
             "model": "Mustang",
@@ -337,6 +365,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10028,
             "type": "wagon",
             "brand": "Mazda",
             "model": "6",
@@ -349,6 +378,7 @@
             "transmission": "automatic"
         },
         {
+            "car_id": 10029,
             "type": "wagon",
             "brand": "VW",
             "model": "Golf",
