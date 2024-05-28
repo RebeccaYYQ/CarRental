@@ -20,7 +20,7 @@
         <div class="align-right flex">
             <div class="flex" id="searchBar">
                 <input type="text" id="searchQuery" name="searchQuery" placeholder="Search cars" size="47">
-                <button id="searchButton" type="submit" class="align-right" onClick="displaySearchResults()"><span class="material-symbols-outlined">search</span></button>
+                <button id="searchButton" class="align-right" onClick="displaySearchResults()"><span class="material-symbols-outlined">search</span></button>
             </div>
             <a href="cart.php" class="flex">
                 <span class="material-symbols-outlined md-60">shopping_cart</span>

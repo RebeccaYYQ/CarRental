@@ -1,65 +1,66 @@
 <header>
+    <!-- button to show and hide the categories -->
     <button name="showNav" class="navButton" id="showHideNavBtn" onClick="showHideNav()">Browse by Category</button>
+
+    <!-- the categories -->
     <nav id="navCategories" class="hide">
-        <form action="index.php" method="POST">
             <ul class="flex">
-                <li><button type="submit" name="category" class="navButton" value="Home">All</button></li>
+                <li><button name="category" class="navButton" onClick="displaySearchResults()">All</button></li>
                 <li>
                     <div class="dropdown flex">
-                        <button type="submit" name="category" class="navButton" value="Frozen">Sedan</button>
+                        <button name="category" class="navButton" onClick="displaySearchResults('sedan')">Sedan</button>
                         <div class="dropdownContent">
-                            <button type="submit" name="subCategory" class="navSubButton" value="Frozen Meat">Toyota</button>
-                            <button type="submit" name="subCategory" class="navSubButton" value="Ice Cream">BMW</button>
+                            <button name="subCategory" class="navSubButton" value="Frozen Meat">Toyota</button>
+                            <button name="subCategory" class="navSubButton" value="Ice Cream">BMW</button>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="dropdown flex">
-                        <button type="submit" name="category" class="navButton" value="Fresh">Wagon</button>
+                        <button name="category" class="navButton" onClick="displaySearchResults('wagon')">Wagon</button>
                         <div class="dropdownContent">
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Fruit">Fruit</button>
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Vegetable">Vegetable</button>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="dropdown flex">
-                        <button type="submit" name="category" class="navButton"
+                        <button name="category" class="navButton"
                             value="Beverages">Convertible</button>
                         <div class="dropdownContent">
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Coffee">Coffee</button>
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Juice">Juice</button>
-                            <button type="submit" name="subCategory" class="navSubButton" value="Tea">Tea</button>
+                            <button name="subCategory" class="navSubButton" value="Tea">Tea</button>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="dropdown flex">
-                        <button type="submit" name="category" class="navButton" value="Household">SUV</button>
+                        <button name="category" class="navButton" value="Household">SUV</button>
                         <div class="dropdownContent">
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Cleaning">Cleaning</button>
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton"
                                 value="Medicine">Medicine</button>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="dropdown flex">
-                        <button type="submit" name="category" class="navButton" value="Pet Food">Minivan</button>
+                        <button name="category" class="navButton" value="Pet Food">Minivan</button>
                         <div class="dropdownContent">
-                            <button type="submit" name="subCategory" class="navSubButton" value="Cat">Cat</button>
-                            <button type="submit" name="subCategory" class="navSubButton" value="Dog">Dog</button>
-                            <button type="submit" name="subCategory" class="navSubButton"
+                            <button name="subCategory" class="navSubButton" value="Cat">Cat</button>
+                            <button name="subCategory" class="navSubButton" value="Dog">Dog</button>
+                            <button name="subCategory" class="navSubButton"
                                 value="Small Animals">Small Animals</button>
                         </div>
                     </div>
                 </li>
             </ul>
-        </form>
     </nav>
 </header>

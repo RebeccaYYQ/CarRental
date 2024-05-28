@@ -9,12 +9,19 @@ function showHideNav() {
     }
 }
 
-//function to display the search results. If no query then it will display everything
-function displaySearchResults() {
+//function to display the search results. If no query then it will display everything. Also displays by category
+function displaySearchResults(category) {
     //first clear the page of any current searches
     $('#result').empty();
 
-    var query = $('#searchQuery').val(); //get the search query
+    if (category !== undefined && category !== null && category !== '') {
+        // if the category is set, put the query as that category
+        var query = category;
+    } else {
+        // use the search query
+        var query = $('#searchQuery').val(); //get the search query
+    }
+
     $.ajax({
         url: 'getCarsFromDB.php',
         type: 'GET',
