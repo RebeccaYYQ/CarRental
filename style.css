@@ -11,6 +11,9 @@
     display: none;
 }
 
+.align-center {
+    align-items: center;
+}
 
 
 /* top level header/navigation */
@@ -75,20 +78,6 @@ ul {
     width: auto;
 }
 
-/*  ----------------------------to check if still needed-----------------------------------------------*/
-
-#cartQuantity {
-    background-color: #FC6E51;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 12px;
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    line-height: 15px;
-}
-
 /* icon */
 .material-symbols-outlined {
     font-variation-settings:
@@ -134,14 +123,6 @@ ul {
 .rentBtn {
     padding: 5px 30px;
     cursor: pointer;
-}
-
-.quantityField {
-    width: 50px;
-    padding: 5px;
-    text-align: center;
-    font-size: 16px;
-    margin: 0px;
 }
 
 /* Shopping cart page */

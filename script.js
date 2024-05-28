@@ -1,7 +1,7 @@
 // To show or hide the nav
 function showHideNav() {
     var nav = document.getElementById('navCategories');
-    //if it is visible, hide. Else show
+    //if it is hidden, show. Else hide it
     if (nav.classList.contains('hide')) {
         nav.classList.remove('hide');
     } else {
@@ -9,10 +9,19 @@ function showHideNav() {
     }
 }
 
+//To just hide the nav, if it is visible
+function hideNav() {
+    var nav = document.getElementById('navCategories');
+    if (!nav.classList.contains('hide')) {
+        nav.classList.add('hide');
+    }
+}
+
 //function to display the search results. If no query then it will display everything. Also displays by category
 function displaySearchResults(category) {
-    //first clear the page of any current searches
+    //first clear the page of any current searches, and hide the nav
     $('#result').empty();
+    hideNav();
 
     if (category !== undefined && category !== null && category !== '') {
         // if the category is set, put the query as that category
