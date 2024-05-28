@@ -9,13 +9,6 @@ function showHideNav() {
     }
 }
 
-//when the main page first loads, initialise it
-function initialise() {
-    $(document).ready(function () {
-        displaySearchResults();
-    });
-}
-
 //function to display the search results. If no query then it will display everything
 function displaySearchResults() {
     //first clear the page of any current searches

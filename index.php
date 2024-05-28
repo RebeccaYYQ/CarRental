@@ -36,8 +36,12 @@
     </main>
 
     <script>
-        //when the document first loads, display results
-        //initialise();
+        //if the section is completely empty (eg on first visit or refresh), initialise it with all cars.
+        $(document).ready(function() {
+            if ($('#result').children().length === 0) {
+                displaySearchResults();
+            }
+        });
     </script>
 </body>
 
