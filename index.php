@@ -23,7 +23,15 @@
                 var car;
                 for (var i = 0; i < data.length; i++) {
                     car = data[i];
-                    $('#result').append(`<p>Car ID: ${car.car_id} Model: ${car.model} </p>`);
+                    $('#result').append(`<div class='productItem flex'>
+                                            <img src='images/${car.image}' class='productItemImage'>
+                                            <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
+                                                <u>${car.type} | $${car.price_day} per day</u><br>
+                                                ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
+                                                Amount available: ${car.quantity}<br>
+                                                Mileage: ${car.mileage}<br></p>
+                                            <button class='rentBtn' type='button' onClick='itemGridCart("minus")'>Rent</button>
+                                        </div>`);
                 }
             },
             error: function(xhr, status, error) {
