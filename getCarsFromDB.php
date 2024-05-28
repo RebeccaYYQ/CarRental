@@ -10,9 +10,20 @@ if ($conn->connect_error) {
 $car_id = isset($_GET['car_id']) ? intval($_GET['car_id']) : 0;
 
 // set SQL select
-$stmt = $conn->prepare("SELECT * FROM cars");
-// $stmt = $conn->prepare("SELECT * FROM cars WHERE car_id = ?");
-// $stmt->bind_param("i", $car_id);
+$query = isset($_GET['query']) ? $conn->real_escape_string($_GET['query']) : '';
+
+$sql = "SELECT * FROM cars WHERE 
+        type LIKE ? OR 
+        brand LIKE ? OR 
+        model LIKE ? OR 
+        fuel_type LIKE ? OR 
+        transmission LIKE ?";
+
+$stmt = $conn->prepare($sql);
+
+// Bind the parameters, using wildcards for the LIKE operator
+$searchTerm = '%' . $query . '%';
+$stmt->bind_param('sssss', $searchTerm, $searchTerm, $searchTerm, $searchTerm, $searchTerm);
 
 //get result and return as JSON
 $stmt->execute();

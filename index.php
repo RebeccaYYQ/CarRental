@@ -6,41 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="script.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
     <title>Grocery Mart</title>
 </head>
-
-<!-- AJAX call to PHP server to get data and display it -->
-<script>
-    $(document).ready(function() {
-        //var carId = $('#carIdInput').val(); // Get the car ID from input
-        $.ajax({
-            url: 'getCarsFromDB.php',
-            type: 'GET',
-            //data: { car_id: carId }, // Send the car_id
-            success: function(data) {
-                var car;
-                for (var i = 0; i < data.length; i++) {
-                    car = data[i];
-                    $('#result').append(`<div class='productItem flex'>
-                                            <img src='images/${car.image}' class='productItemImage'>
-                                            <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
-                                                <u>${car.type} | $${car.price_day} per day</u><br>
-                                                ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
-                                                Amount available: ${car.quantity}<br>
-                                                Mileage: ${car.mileage}<br></p>
-                                            <button class='rentBtn' type='button' onClick='itemGridCart("minus")'>Rent</button>
-                                        </div>`);
-                }
-            },
-            error: function(xhr, status, error) {
-                $('#result').html('Error: ' + error);
-            }
-        });
-
-    });
-</script>
 
 <body>
     <header class="flex">
@@ -48,10 +18,10 @@
             <h1>Car Rental</h1>
         </a>
         <div class="align-right flex">
-            <form method="POST" action="index.php" class="flex" id="searchBar">
-                <input type="text" id="search" name="searchQuery" placeholder="Search cars" size="47">
-                <button id="searchButton" type="submit" class="align-right"><span class="material-symbols-outlined">search</span></button>
-            </form>
+            <div class="flex" id="searchBar">
+                <input type="text" id="searchQuery" name="searchQuery" placeholder="Search cars" size="47">
+                <button id="searchButton" type="submit" class="align-right" onClick="displaySearchResults()"><span class="material-symbols-outlined">search</span></button>
+            </div>
             <a href="cart.php" class="flex">
                 <span class="material-symbols-outlined md-60">shopping_cart</span>
                 <span id="cartQuantity">0</span>
@@ -65,6 +35,10 @@
         </section>
     </main>
 
+    <script>
+        //when the document first loads, display results
+        //initialise();
+    </script>
 </body>
 
 </html>
