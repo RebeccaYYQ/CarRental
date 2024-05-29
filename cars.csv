@@ -1,6 +1,6 @@
 car_id,type,brand,model,image,mileage,fuel_type,seats,quantity,price_day,transmission
 10000,sedan,Toyota,Corolla Hatch,toyota-corolla.png,10000,petrol,5,3,90,automatic
-10001,sedan,Kia,Rio,kia-rio.png,13000,petrol,5,3,70,automatic
+10001,sedan,Kia,Rio,kia-rio.png,13000,petrol,5,0,70,automatic
 10002,sedan,Toyota,Yaris,toyota-yaris.png,18000,petrol,5,2,40,automatic
 10003,SUV,MG,HS,mg-hs.png,23000,petrol,5,1,60,automatic
 10004,SUV,Volkswagen,Tiguan,vw-tiguan.png,10720,petrol,5,3,80,automatic

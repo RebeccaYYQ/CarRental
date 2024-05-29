@@ -37,21 +37,32 @@ function displaySearchResults(category) {
         data: { query: query }, //send search query
         success: function (data) {
             var car;
+            var content = '';
             if (data.length == 0) {
                 $('#result').append('<p>No cars found.</p>');
             }
             else {
                 for (var i = 0; i < data.length; i++) {
+                    //set the current data and clear the content var
                     car = data[i];
-                    $('#result').append(`<div class='productItem flex'>
-                                        <img src='images/${car.image}' class='productItemImage'>
-                                        <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
-                                            <u>${car.type} | $${car.price_day} per day</u><br>
-                                            ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
-                                            Amount available: ${car.quantity}<br>
-                                            Mileage: ${car.mileage}<br></p>
-                                        <button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'>Rent</button>
-                                    </div>`);
+                    content = '';
+                    
+                    content += `<div class='productItem flex'>
+                                    <img src='images/${car.image}' class='productItemImage'>
+                                    <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
+                                    <u>${car.type} | $${car.price_day} per day</u><br>
+                                    ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
+                                    Amount available: ${car.quantity}<br>
+                                    Mileage: ${car.mileage}<br></p>`;
+                    content += `<button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'`;
+                    
+                    //if the quantity is 0, disable the button
+                    if (car.quantity == 0) {
+                        content += ' disabled';
+                    }
+                    content += `>Rent</button></div>`;
+                    
+                    $('#result').append(content);
                 }
             }
         },
@@ -66,5 +77,5 @@ function saveUserSelection(car_id) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "accessSession.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send("carId="+ car_id);
+    xhr.send("carId=" + car_id);
 }

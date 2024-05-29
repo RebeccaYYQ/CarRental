@@ -22,7 +22,7 @@
             "mileage": 13000,
             "fuel_type": "petrol",
             "seats": 5,
-            "quantity": 3,
+            "quantity": 0,
             "price_day": 70,
             "transmission": "automatic"
         },
