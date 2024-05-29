@@ -55,7 +55,7 @@ function displaySearchResults(category) {
                                     ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
                                     Amount available: ${car.quantity}<br>
                                     Mileage: ${car.mileage}<br></p>`;
-                    content += `<a href='reservations.html'>
+                    content += `<a href='reservations.php'>
                         <button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'`;
 
                     //if the quantity is 0, disable the button

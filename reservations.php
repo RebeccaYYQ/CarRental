@@ -13,13 +13,15 @@
     <title>Car Rental</title>
 </head>
 
+<?php session_start(); ?>
+
 <body>
     <header class="flex">
         <a href="index.php" class="flex"><img id="shopIcon" src="images/carIcon.png">
             <h1>Car Rental</h1>
         </a>
         <div class="align-right flex">
-            <a href="reservations.html" class="flex align-center">
+            <a href="reservations.php" class="flex align-center">
                 <span class="material-symbols-outlined md-60">bookmark</span>
                 <p><b>My Reservations</b></p>
             </a>
@@ -32,11 +34,13 @@
     </main>
 
     <script>
+        //get the chosen car from session variables
         var chosenCarId = "<?php echo $_SESSION['chosenCarId']; ?>";
         console.log("carId: " + chosenCarId);
+        
         //when the document is ready, fill it with the car the user wanted. 
         $(document).ready(function () {
-            displaySearchResults();
+            displaySearchResults(chosenCarId);
         });
     </script>
 

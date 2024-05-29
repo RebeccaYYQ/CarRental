@@ -24,7 +24,7 @@
                 <input type="text" id="searchQuery" name="searchQuery" placeholder="Search cars" size="47">
                 <button id="searchButton" class="align-right" onClick="displaySearchResults()"><span class="material-symbols-outlined">search</span></button>
             </div>
-            <a href="reservations.html" class="flex align-center">
+            <a href="reservations.php" class="flex align-center">
                 <span class="material-symbols-outlined md-60">bookmark</span>
                 <p><b>My Reservations</b></p>
             </a>
