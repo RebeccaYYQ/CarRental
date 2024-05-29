@@ -50,7 +50,7 @@ function displaySearchResults(category) {
                                             ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
                                             Amount available: ${car.quantity}<br>
                                             Mileage: ${car.mileage}<br></p>
-                                        <button class='rentBtn' type='button'>Rent</button>
+                                        <button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'>Rent</button>
                                     </div>`);
                 }
             }
@@ -59,4 +59,12 @@ function displaySearchResults(category) {
             $('#result').html('Error: ' + error);
         }
     });
+}
+
+//when the user selects a rent button, save their choice to the session.
+function saveUserSelection(car_id) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "accessSession.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("carId="+ car_id);
 }

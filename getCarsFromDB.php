@@ -1,4 +1,5 @@
 <?php
+//get wanted cars from the DB, based on a query
 header('Content-Type: application/json'); 
 
 $conn = new mysqli("localhost", "root", "", "progintas2");

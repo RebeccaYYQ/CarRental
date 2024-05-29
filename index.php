@@ -12,6 +12,8 @@
     <title>Car Rental</title>
 </head>
 
+<?php session_start(); ?>
+
 <body>
     <header class="flex">
         <a href="index.php" class="flex"><img id="shopIcon" src="images/carIcon.png">
