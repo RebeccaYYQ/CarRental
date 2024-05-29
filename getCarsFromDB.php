@@ -18,13 +18,14 @@ $sql = "SELECT * FROM cars WHERE
         brand LIKE ? OR 
         model LIKE ? OR 
         fuel_type LIKE ? OR 
-        transmission LIKE ?";
+        transmission LIKE ? OR
+        car_id LIKE ?";
 
 $stmt = $conn->prepare($sql);
 
 // Bind the parameters, using wildcards for the LIKE operator
 $searchTerm = '%' . $query . '%';
-$stmt->bind_param('sssss', $searchTerm, $searchTerm, $searchTerm, $searchTerm, $searchTerm);
+$stmt->bind_param('ssssss', $searchTerm, $searchTerm, $searchTerm, $searchTerm, $searchTerm, $searchTerm);
 
 //get result and return as JSON
 $stmt->execute();

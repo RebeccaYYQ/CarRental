@@ -32,11 +32,11 @@
     </main>
 
     <script>
-        //if the section is completely empty (eg on first visit or refresh), initialise it with all cars.
+        var chosenCarId = "<?php echo $_SESSION['chosenCarId']; ?>";
+        console.log("carId: " + chosenCarId);
+        //when the document is ready, fill it with the car the user wanted. 
         $(document).ready(function () {
-            if ($('#result').children().length === 0) {
-                displaySearchResults();
-            }
+            displaySearchResults();
         });
     </script>
 
