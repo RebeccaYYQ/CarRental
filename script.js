@@ -12,7 +12,8 @@ function showHideNav() {
 //To just hide the nav, if it is visible
 function hideNav() {
     var nav = document.getElementById('navCategories');
-    if (!nav.classList.contains('hide')) {
+    //if the nav exists, hide it
+    if (nav != null && !nav.classList.contains('hide')) {
         nav.classList.add('hide');
     }
 }
@@ -46,7 +47,7 @@ function displaySearchResults(category) {
                     //set the current data and clear the content var
                     car = data[i];
                     content = '';
-                    
+
                     content += `<div class='productItem flex'>
                                     <img src='images/${car.image}' class='productItemImage'>
                                     <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
@@ -54,14 +55,15 @@ function displaySearchResults(category) {
                                     ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
                                     Amount available: ${car.quantity}<br>
                                     Mileage: ${car.mileage}<br></p>`;
-                    content += `<button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'`;
-                    
+                    content += `<a href='reservations.html'>
+                        <button class='rentBtn' type='button' id='${car.car_id}' onclick='saveUserSelection(${car.car_id})'`;
+
                     //if the quantity is 0, disable the button
                     if (car.quantity == 0) {
                         content += ' disabled';
                     }
-                    content += `>Rent</button></div>`;
-                    
+                    content += `>Rent</button></a></div>`;
+
                     $('#result').append(content);
                 }
             }
