@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
@@ -29,17 +28,58 @@
     </header>
 
     <main>
-        <section class='itemGrid flex' id="result">
-        </section>
+        <h2>My Reservations</h2>
+        <div class="flex">
+            <section class='itemGrid flex' id="result">
+            </section>
+            <div class="resFormDisplay">
+                <form id="resForm" class="flex" action="deliveryConfirm.php" onsubmit="return validEmail()" method="post">
+                    <div>
+                        <h3>Edit Rent Details</h3>
+                        <label for="quantity">Quantity of Cars:</label>
+                        <input type="number" id="quantityField" value="1" min="1" required><br>
+
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" required><br>
+
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" required><br>
+
+                        <p><b>Total cost:</b></p>
+                    </div>
+                    <div>
+                        <h3>Submit Reservation</h3>
+                        <label class="formLabel" for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br>
+
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="text" id="mobile" name="mobile" pattern="\d{10}" title="Please enter a 10-digit mobile number" required><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+
+                        <label for="license">Do you have a valid driver's licence?</label>
+                        <select id="state" name="license" required>
+                            <option value="">Select Option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select><br>
+
+                        <input type="submit" value="Submit" class="resConfirmBtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </main>
 
     <script>
         //get the chosen car from session variables
         var chosenCarId = "<?php echo $_SESSION['chosenCarId']; ?>";
         console.log("carId: " + chosenCarId);
-        
+
         //when the document is ready, fill it with the car the user wanted. 
-        $(document).ready(function () {
+        $(document).ready(function() {
             displaySearchResults(chosenCarId);
         });
     </script>
