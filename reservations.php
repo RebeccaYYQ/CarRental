@@ -65,7 +65,7 @@
                             <option value="No">No</option>
                         </select><br>
 
-                        <input type="submit" value="Submit" class="resConfirmBtn">
+                        <input type="submit" value="Submit" class="resConfirmBtn"><a href="index.php"><input type="button" value="Cancel" class="resCancelBtn" onclick=clearCarSelection()></a>
                     </div>
                 </form>
             </div>
@@ -76,12 +76,19 @@
     <script>
         //get the chosen car from session variables
         var chosenCarId = "<?php echo $_SESSION['chosenCarId']; ?>";
-        console.log("carId: " + chosenCarId);
+        if (chosenCarId != null) {
+            console.log("carId: " + chosenCarId);
+        }
 
         //when the document is ready, fill it with the car the user wanted. 
         $(document).ready(function() {
-            displaySearchResults(chosenCarId);
+            getCarDetails(chosenCarId);
         });
+
+        //get the chosen car's details for calculation, i.e. price and quantity
+        // var carPrice = document.getElementById('car_price');
+        // console.log(carPrice);
+        
     </script>
 
 </body>

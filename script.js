@@ -92,3 +92,40 @@ function validEmail() {
         return false;
     }
 }
+
+//for the reservations page. Returns jsut one car object, and also adds span ids so that wanted values can be selected
+function getCarDetails(chosenCarId) {
+    $.ajax({
+        url: 'getCarsFromDB.php',
+        type: 'GET',
+        data: { query: chosenCarId }, //send search query
+        success: function (data) {
+            var car = data[0];
+            if (data.length == 0) {
+                $('#result').append('<p>No cars found.</p>');
+            }
+            else {
+                //set the current data and clear the content var
+                car = data[0];
+                $('#result').append(`<div class='productItem flex'>
+                                    <img src='images/${car.image}' class='productItemImage'>
+                                    <p class='productItemContent'><b>${car.brand} ${car.model}</b><br>
+                                    <u>${car.type} | $<span id ='car_price'>${car.price_day}</span> per day</u><br>
+                                    ${car.seats} seats, ${car.transmission}, ${car.fuel_type}<br>
+                                    Amount available: <span id='car_quantity'>${car.quantity}</span><br>
+                                    Mileage: ${car.mileage}<br></p>
+                                </div>`);
+            }
+        },
+        error: function (xhr, status, error) {
+            $('#result').html('Error: ' + error);
+        }
+    });
+}
+
+function clearCarSelection() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "clearCarFromSession.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("carId=" + 1);
+}
