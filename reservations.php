@@ -33,7 +33,7 @@
             <section class='itemGrid flex' id="result">
             </section>
             <div class="resFormDisplay">
-                <form id="resForm" class="flex" action="deliveryConfirm.php" onsubmit="return validEmail()" method="post">
+                <form id="resForm" class="flex" action="orderConfirm.php" onsubmit="return validEmail()" method="post">
                     <div>
                         <h3>Edit Rent Details</h3>
                         <label for="quantity">Quantity of Cars:</label>
